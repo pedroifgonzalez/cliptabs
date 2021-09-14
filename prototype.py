@@ -58,22 +58,22 @@ tab2_action = functools.partial(tab_action, tab='tab2')
 tab3_action = functools.partial(tab_action, tab='tab3')
 tab4_action = functools.partial(tab_action, tab='tab4')
 
-tab1 = tkinter.Button(gui, text = ' ', image=pixelVirtual,
+tab1 = tkinter.Button(gui, text = '', image=pixelVirtual,
                     height=BTN_HEIGHT,compound="c",
                     background=BACKGROUND,
                     activebackground=ACTIVE_BACKGROUND_COLOR, command = tab1_action)
 
-tab2 = tkinter.Button(gui, text = ' ', image=pixelVirtual,
+tab2 = tkinter.Button(gui, text = '', image=pixelVirtual,
                     height=BTN_HEIGHT,compound="c",
                     background=BACKGROUND,
                     activebackground=ACTIVE_BACKGROUND_COLOR, command = tab2_action)
 
-tab3 = tkinter.Button(gui, text = ' ', image=pixelVirtual,
+tab3 = tkinter.Button(gui, text = '', image=pixelVirtual,
                     height=BTN_HEIGHT,compound="c",
                     background=BACKGROUND,
                     activebackground=ACTIVE_BACKGROUND_COLOR, command = tab3_action)
 
-tab4 = tkinter.Button(gui, text = ' ', image=pixelVirtual,
+tab4 = tkinter.Button(gui, text = '', image=pixelVirtual,
                     height=BTN_HEIGHT,compound="c",
                     background=BACKGROUND,
                     activebackground=ACTIVE_BACKGROUND_COLOR, command = tab4_action)
@@ -128,7 +128,6 @@ def mouse_is_moving(x,y):
 
 mouse_listener = Listener(on_move=mouse_is_moving)
 read_clipboard = threading.Thread(target=update_tabs_text, daemon=True)
-icon = "@" + dir_path + os.path.sep + "bitmaps.xmb"
 
 if __name__ == "__main__":
     gui.bind("<Enter>", lambda *ignore: gui.wm_attributes('-alpha',1.0))
