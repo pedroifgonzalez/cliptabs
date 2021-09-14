@@ -9,8 +9,6 @@ import functools
 import tkinter
 import threading
 
-dir_path = os.path.dirname(os.path.realpath(__file__))
-sys.path.append(dir_path + os.path.sep + 'lib')
 
 import pyperclip
 from pynput import keyboard
