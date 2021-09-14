@@ -131,11 +131,8 @@ read_clipboard = threading.Thread(target=update_tabs_text, daemon=True)
 icon = "@" + dir_path + os.path.sep + "bitmaps.xmb"
 
 if __name__ == "__main__":
-    # gui.wait_visibility(gui)
-    # gui.wm_attributes('-alpha',0.1)
     gui.bind("<Enter>", lambda *ignore: gui.wm_attributes('-alpha',1.0))
     gui.bind("<Leave>", lambda *ignore: gui.wm_attributes('-alpha',0.1))
-    # gui.iconbitmap(icon)
     gui.bind("<Escape>", lambda *ignore: gui.destroy())
     mouse_listener.start()
     read_clipboard.start()
